@@ -77,6 +77,6 @@ BCP  "SELECT 'row_id', 'order_id', 'order_date', 'ship_date', 'ship_mode', 'cust
 BCP "SELECT 'customer_id', 'customer_name', 'segment', 'city', 'state' UNION ALL SELECT * FROM customer_temp;" queryout "C:\...\customer_temp.csv" -c -t "," -T -S CP -d automation
 ```
 
-## Power BI dashboard
+## dashboard
 ![automation](https://user-images.githubusercontent.com/108328139/190431446-7d79e111-62cd-4b60-a729-d30b557a5b07.png)
-[Power BI Services](https://app.powerbi.com/viewr=eyJrIjoiZDg0NTIxYTYtZjdmZS00ZGU0LThjYTYtNmIzYWVkMWFlYzNiIiwidCI6ImFmZjljYzU2LTVkYzAtNGMyZS1iNTlmLTZkY2JkMzI1NzM3YiIsImMiOjEwfQ%3D%3D&pageName=ReportSection)
+#### view at [Power BI Services](https://app.powerbi.com/viewr=eyJrIjoiZDg0NTIxYTYtZjdmZS00ZGU0LThjYTYtNmIzYWVkMWFlYzNiIiwidCI6ImFmZjljYzU2LTVkYzAtNGMyZS1iNTlmLTZkY2JkMzI1NzM3YiIsImMiOjEwfQ%3D%3D&pageName=ReportSection)
