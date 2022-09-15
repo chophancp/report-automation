@@ -49,13 +49,13 @@ CREATE TABLE
   )
   GO
   
-  BULK INSERT automation.dbo.order_temp FROM 'C:\Users\chophan\OneDrive\Desktop\mindx\bi\exam\4 report automation\order_temp.csv'
-  WITH (
-      FIELDTERMINATOR = ',',
-      ROWTERMINATOR = '\n',
-      FIRSTROW=2
-  );
-  GO
+BULK INSERT automation.dbo.order_temp FROM 'C:\Users\chophan\OneDrive\Desktop\mindx\bi\exam\4 report automation\order_temp.csv'
+WITH (
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n',
+    FIRSTROW=2
+);
+GO
 ```
 #### `.bat` automation import `.csv` & `create table order new` & `create table customer hist` in sql server
 ```bat
