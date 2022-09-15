@@ -51,7 +51,7 @@ WITH
 );
 GO
 ```
-#### `.bat` automation import `.csv` & `create table order new` & `create table customer hist` in sql server
+#### `.bat` automation import `.csv` & `create table order new` & `create table customer hist` in SQL Server
 ```bat
 --drop all table & create table customer hist
 SQLCMD -S CP -d automation -E -Q "DROP TABLE customer_hist;"
@@ -69,7 +69,8 @@ SQLCMD -S CP -d automation -E -Q "SELECT * INTO order_new FROM order_temp WHERE 
 SQLCMD -S CP -d automation -E -Q "CREATE TABLE customer_temp (customer_id VARCHAR(50), customer_name VARCHAR(50), segment VARCHAR(50), city VARCHAR(50), state VARCHAR(50)); BULK INSERT automation.dbo.customer_temp FROM 'C:\...\customer_temp.csv' WITH (FIELDTERMINATOR = ',', ROWTERMINATOR = '\n', FIRSTROW = 2);"
 ```
 ## automation export
-#### `.bat` automation export `.csv` in `SQL Server`
+#### `.bat` automation export `.csv` in SQL Server
+#### using `BCP`
 ```bat
 BCP  "SELECT 'row_id', 'order_id', 'order_date', 'ship_date', 'ship_mode', 'customer_id', 'country_region', 'postal_code', 'region', 'product_id', 'categoty', 'sub_category', 'product_name', 'sales', 'quantity', 'discount', 'profit' UNION ALL SELECT * FROM order_temp;" queryout "C:\...\order_temp.csv" -c -t "," -T -S CP -d automation
 
