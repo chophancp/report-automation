@@ -78,6 +78,5 @@ BCP "SELECT 'customer_id', 'customer_name', 'segment', 'city', 'state' UNION ALL
 ```
 
 ## report Power BI
-r=eyJrIjoiZDg0NTIxYTYtZjdmZS00ZGU0LThjYTYtNmIzYWVkMWFlYzNiIiwidCI6ImFmZjljYzU2LTVkYzAtNGMyZS1iNTlmLTZkY2JkMzI1NzM3YiIsImMiOjEwfQ%3D%3D&pageName=ReportSection)
 ![automation](https://user-images.githubusercontent.com/108328139/190431446-7d79e111-62cd-4b60-a729-d30b557a5b07.png)
-[view Power BI](https://app.powerbi.com/view?
+[view Power BI](https://app.powerbi.com/viewr=eyJrIjoiZDg0NTIxYTYtZjdmZS00ZGU0LThjYTYtNmIzYWVkMWFlYzNiIiwidCI6ImFmZjljYzU2LTVkYzAtNGMyZS1iNTlmLTZkY2JkMzI1NzM3YiIsImMiOjEwfQ%3D%3D&pageName=ReportSection)
