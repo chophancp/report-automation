@@ -52,7 +52,7 @@ WITH
 );
 GO
 ```
-#### `.bat` automation import `.csv` & `create table order new` & `create table customer hist` in SQL Server
+#### `.bat` automation import `.csv` & create table `order new` & create table `customer hist` in `SQL Server`
 #### using `SQLCMD`
 ```bat
 --drop all table & create table customer hist
@@ -72,7 +72,7 @@ SQLCMD -S CP -d automation -E -Q "CREATE TABLE customer_temp (customer_id VARCHA
 ```
 
 ## automation export
-#### `.bat` automation export `.csv` in SQL Server
+#### `.bat` automation export `.csv` in `SQL Server`
 #### using `BCP`
 ```bat
 BCP  "SELECT 'row_id', 'order_id', 'order_date', 'ship_date', 'ship_mode', 'customer_id', 'country_region', 'postal_code', 'region', 'product_id', 'categoty', 'sub_category', 'product_name', 'sales', 'quantity', 'discount', 'profit' UNION ALL SELECT * FROM order_temp;" queryout "C:\...\order_temp.csv" -c -t "," -T -S CP -d automation
