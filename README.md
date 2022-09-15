@@ -49,8 +49,10 @@ CREATE TABLE
   )
   GO
   
-BULK INSERT automation.dbo.order_temp FROM 'C:\...\order_temp.csv'
-WITH (
+BULK INSERT 
+  automation.dbo.order_temp FROM 'C:\...\order_temp.csv'
+WITH
+(
     FIELDTERMINATOR = ',',
     ROWTERMINATOR = '\n',
     FIRSTROW=2
