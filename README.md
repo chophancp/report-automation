@@ -66,7 +66,6 @@ SQLCMD -S CP -d automation -E -Q "CREATE TABLE order_temp (row_id VARCHAR(50), o
 --create table order new
 SQLCMD -S CP -d automation -E -Q "SELECT * INTO order_new FROM order_temp WHERE CONVERT(DATE, order_date) = CONVERT(DATE, GETDATE());"
 
---
 SQLCMD -S CP -d automation -E -Q "CREATE TABLE customer_temp (customer_id VARCHAR(50), customer_name VARCHAR(50), segment VARCHAR(50), city VARCHAR(50), state VARCHAR(50)); BULK INSERT automation.dbo.customer_temp FROM 'C:\...\customer_temp.csv' WITH (FIELDTERMINATOR = ',', ROWTERMINATOR = '\n', FIRSTROW = 2);"
 ```
 ## automation export
@@ -79,4 +78,4 @@ BCP "SELECT 'customer_id', 'customer_name', 'segment', 'city', 'state' UNION ALL
 
 ## dashboard
 ![automation](https://user-images.githubusercontent.com/108328139/190431446-7d79e111-62cd-4b60-a729-d30b557a5b07.png)
-## view at [Power BI Services](https://app.powerbi.com/viewr=eyJrIjoiZDg0NTIxYTYtZjdmZS00ZGU0LThjYTYtNmIzYWVkMWFlYzNiIiwidCI6ImFmZjljYzU2LTVkYzAtNGMyZS1iNTlmLTZkY2JkMzI1NzM3YiIsImMiOjEwfQ%3D%3D&pageName=ReportSection)
+#### view at [Power BI Services](https://app.powerbi.com/viewr=eyJrIjoiZDg0NTIxYTYtZjdmZS00ZGU0LThjYTYtNmIzYWVkMWFlYzNiIiwidCI6ImFmZjljYzU2LTVkYzAtNGMyZS1iNTlmLTZkY2JkMzI1NzM3YiIsImMiOjEwfQ%3D%3D&pageName=ReportSection)
