@@ -1,5 +1,6 @@
 # 
 ## automation import
+#### `.sql`
 ```sql
 CREATE TABLE
   order_temp
@@ -52,6 +53,7 @@ WITH
 GO
 ```
 #### `.bat` automation import `.csv` & `create table order new` & `create table customer hist` in SQL Server
+#### using `SQLCMD`
 ```bat
 --drop all table & create table customer hist
 SQLCMD -S CP -d automation -E -Q "DROP TABLE customer_hist;"
