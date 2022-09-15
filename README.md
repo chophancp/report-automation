@@ -70,7 +70,9 @@ SQLCMD -S CP -d automation -E -Q "SELECT * INTO order_new FROM order_temp WHERE 
 SQLCMD -S CP -d automation -E -Q "CREATE TABLE customer_temp (customer_id VARCHAR(50), customer_name VARCHAR(50), segment VARCHAR(50), city VARCHAR(50), state VARCHAR(50)); BULK INSERT automation.dbo.customer_temp FROM 'C:\...\customer_temp.csv' WITH (FIELDTERMINATOR = ',', ROWTERMINATOR = '\n', FIRSTROW = 2);"
 ```
 ## automation export
+BCP  "SELECT 'row_id', 'order_id', 'order_date', 'ship_date', 'ship_mode', 'customer_id', 'country_region', 'postal_code', 'region', 'product_id', 'categoty', 'sub_category', 'product_name', 'sales', 'quantity', 'discount', 'profit' UNION ALL SELECT * FROM order_temp;" queryout "C:\...\order_temp.csv" -c -t "," -T -S CP -d automation
 
+BCP "SELECT 'customer_id', 'customer_name', 'segment', 'city', 'state' UNION ALL SELECT * FROM customer_temp;" queryout "C:\...\customer_temp.csv" -c -t "," -T -S CP -d automation
 
 ## report power bi
 ![automation](https://user-images.githubusercontent.com/108328139/190431446-7d79e111-62cd-4b60-a729-d30b557a5b07.png)
