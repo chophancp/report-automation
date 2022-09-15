@@ -49,7 +49,7 @@ CREATE TABLE
   )
   GO
   
-BULK INSERT automation.dbo.order_temp FROM 'C:\Users\chophan\OneDrive\Desktop\mindx\bi\exam\4 report automation\order_temp.csv'
+BULK INSERT automation.dbo.order_temp FROM 'C:\...\order_temp.csv'
 WITH (
     FIELDTERMINATOR = ',',
     ROWTERMINATOR = '\n',
@@ -73,7 +73,7 @@ SQLCMD -S CP -d automation -E -Q "CREATE TABLE order_temp (row_id VARCHAR(50), o
 SQLCMD -S CP -d automation -E -Q "SELECT * INTO order_new FROM order_temp WHERE CONVERT(DATE, order_date) = CONVERT(DATE, GETDATE());"
 
 --
-SQLCMD -S CP -d automation -E -Q "CREATE TABLE customer_temp (customer_id VARCHAR(50), customer_name VARCHAR(50), segment VARCHAR(50), city VARCHAR(50), state VARCHAR(50)); BULK INSERT automation.dbo.customer_temp FROM 'C:\Users\chophan\OneDrive\Desktop\mindx\bi\exam\4 report automation\customer_temp.csv' WITH (FIELDTERMINATOR = ',', ROWTERMINATOR = '\n', FIRSTROW = 2);"
+SQLCMD -S CP -d automation -E -Q "CREATE TABLE customer_temp (customer_id VARCHAR(50), customer_name VARCHAR(50), segment VARCHAR(50), city VARCHAR(50), state VARCHAR(50)); BULK INSERT automation.dbo.customer_temp FROM 'C:\...\customer_temp.csv' WITH (FIELDTERMINATOR = ',', ROWTERMINATOR = '\n', FIRSTROW = 2);"
 ```
 ## automation export
 
